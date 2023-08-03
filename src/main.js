@@ -3,13 +3,13 @@ import "./style.css";
 import "./index.css";
 import "element-plus/dist/index.css";
 import ElementPlus from "element-plus";
-import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import App from "./App.vue";
 import Home from "./views/Home.vue";
 import Cart from "./views/Cart.vue";
 import { createStore } from 'vuex'
 import { createRouter, createWebHashHistory } from "vue-router";
 import { createPinia } from 'pinia'
+
 const pinia = createPinia()
 
 const routes = [
