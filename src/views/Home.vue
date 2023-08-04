@@ -224,7 +224,7 @@ onMounted(() => {
       </div>
 
       <div class="flex flex-1 flex-col justify-between">
-        <div class="flex flex-col border-b py-2 hover:opacity-70 cursor-pointer relative " v-for="i in sights">
+        <div class="flex flex-col border-b py-2 hover:opacity-70  relative " v-for="i in sights">
           <h4 class="font-bold text-main">{{ i.title }}</h4>
           <span class="flex flex-row text-sm mt-2"><Calendar class="w-4 mr-2 text-red-300" />{{ i.date }}</span>
           <span class="text-yellow-500 absolute left-0 xs:right-4 xs:left-[unset] xs:top-4 xs:bottom-[unset] bottom-2 text-xl font-bold">${{ (i.price).toLocaleString() }}</span>

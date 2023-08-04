@@ -26,7 +26,7 @@ const submitForm = async () => {
       ElMessage.success('注册成功，請等待客服人員驗證資料')
       dialogVisible.value = false
     } else {
-      ElMessage.success('登入成功')
+      ElMessage.success('无此帐号，请联系客服')
     }
   });
 };
