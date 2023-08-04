@@ -18,7 +18,7 @@ const features = [
     content: '提供近50万种吃喝玩乐、租车、住宿等体验，带你发现更好玩的世界',
   },
   {
-    title: '享 THAI BANG 会员礼遇',
+    title: '享会员礼遇',
     content: '注册帐户即可轻松解锁会员独享价、加倍赚积分',
   },
   {
@@ -159,15 +159,15 @@ onMounted(() => {
       </h1>
     </div>
   </div>
-  <div class="max-w-[1440px] px-10 md:px-40 lg:px-0 mx-auto">
+  <div class="max-w-[1440px] px-4 md:px-40 lg:px-0 mx-auto">
     <Title>
       为什么泰国旅游首选 THAI BANG ？
     </Title>
 
-    <div class="flex flex-wrap mb-[120px] grid-cols-4 gap-16 items-center justify-between">
-      <div v-for="i in features" class="flex w-[240px] flex-col gap-4">
-        <h4 class="text-main font-bold text-2xl" v-html="i.title"></h4>
-        <p v-html="i.content"></p>
+    <div class="grid grid-cols-2 flex-wrap mb-10 md:mb-[120px] md:grid-cols-4 gap-4 md:gap-16 items-start md:items-center justify-between">
+      <div v-for="i in features" class="flex md:w-[240px] flex-col gap-4">
+        <h4 class="text-main font-bold text-base md:text-2xl" v-html="i.title"></h4>
+        <p v-html="i.content" class="md:text-base text-sm"></p>
       </div>
     </div>
 
@@ -240,7 +240,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .hero {
-  @apply relative w-screen h-[80vh] bg-center flex items-center justify-center mb-32;
+  @apply relative w-screen h-[50vh] md:h-[80vh] bg-center flex items-center justify-center mb-10 md:mb-32;
   background-image: url('../assets/images/bg.png');
 
   &::before {
