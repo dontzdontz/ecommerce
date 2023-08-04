@@ -53,32 +53,31 @@ const submitForm = async () => {
 <template>
   <div class="hero">
     <div class="flex items-center justify-center flex-col">
-      <h1 className="font-bold text-[64px] text-center text-white">
+      <h1 className="font-bold text-xl md:text-[64px] text-center text-white">
         2023 泰国热门自由行景点推荐
       </h1>
     </div>
   </div>
 
-  <div class="mx-auto max-w-[1280px] mb-40">
+  <div class="mx-auto max-w-[1280px] mb-40 md:px-0 px-2">
     <h2 class="font-bold text-xl mb-4">訂購明細</h2>
 
     <div class="grid grid-col">
-      <div class="bg-[#ccc] grid grid-cols-5 items-center justify-center text-center px-2 py-2 rounded font-bold">
+      <div class="bg-[#ccc] grid grid-cols-5 text-sm md:text-sm items-center justify-center text-center px-2 py-2 rounded font-bold">
         <span>商品名稱</span>
         <span>售價</span>
         <span>數量</span>
         <span>小計</span>
-        <span>
-从购物车中移除</span>
+        <span>移除</span>
       </div>
 
       <el-empty v-if="!cartStore.products.length" description="目前无订购商品" class=" mb-10" />
 
-      <div class="grid grid-cols-5 py-2 border-b items-center justify-center text-center"
+      <div class="grid grid-cols-5 py-2 border-b items-center justify-center text-xs md:text-base text-center"
         v-for="i in cartStore.products">
-        <span v-html="i.title" class="text-left font-bold text-main pl-4 "></span>
-        <span class="text-yellow-500 font-bold">{{ i.price.toLocaleString() }}</span>
-        <span class="flex flex-row mx-auto gap-4">
+        <span v-html="i.title" class="text-left font-bold text-main pl-4 truncate"></span>
+        <span class="text-yellow-500 font-bold ">{{ i.price.toLocaleString() }}</span>
+        <span class="flex flex-row mx-auto gap-1 md:gap-4">
           <Remove @click="decreaseAmount(i)" class="w-4 cursor-pointer hover:text-main text-gray-400" :class="{ 'cursor-not-allowed hover:text-gray-200': i.amount === 1 }" />
           <span class="font-bold">{{ i.amount }}</span>
           <CirclePlus @click="addCart(i)" class="w-4 cursor-pointer hover:text-main text-gray-400"  :class="{ 'cursor-not-allowed hover:text-gray-200': i.amount === 10  }"/>
@@ -87,11 +86,11 @@ const submitForm = async () => {
         <CloseBold @click="removeCart(i)" class="w-4 mx-auto text-red-500 cursor-pointer hover:scale-[1.1]" />
       </div>
 
-      <div class="grid grid-cols-2 w-full  gap-10 my-10">
-        <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="100px" class="flex font-bold flex-col"
+      <div class="grid md:grid-cols-2 w-full  gap-10 my-10">
+        <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="100px" class="flex font-bold flex-col text-sm md:text-base"
           status-icon>
 
-          <div class="bg-[#ccc] w-full text-center px-2 py-2 rounded font-bold mb-4">
+          <div class="bg-[#ccc] text-sm md:text-base  w-full text-center px-2 py-2 rounded font-bold mb-4">
             订购资讯
           </div>
 
@@ -109,9 +108,9 @@ const submitForm = async () => {
         </el-form>
 
         <div class="flex flex-col">
-          <div class="bg-[#ccc] text-center px-2 py-2 rounded font-bold mb-4">付款资讯</div>
-          <div class="flex flex-row justify-between px-4 font-bold">
-            <span class="text-sm">商品总计</span>
+          <div class="bg-[#ccc] text-center px-2 py-2 rounded font-bold mb-4 text-sm md:text-base">付款资讯</div>
+          <div class="flex flex-row justify-between px-4 font-bold text-sm md:text-base">
+            <span class="text-sm ">商品总计</span>
             <span class="text-yellow-500">{{ cartStore.total.toLocaleString() }}</span>
           </div>
         </div>
@@ -120,7 +119,7 @@ const submitForm = async () => {
       <el-divider>
       <el-icon><star-filled class="text-gray-500" /></el-icon>
     </el-divider>
-      <el-button type="primary" class="w-40 mt-10 justify-self-end" @click="submitForm">确定送出</el-button>
+      <el-button type="primary" class="w-40 mt-10 justify-self-center md:justify-self-end" @click="submitForm">确定送出</el-button>
 
 
     </div>
