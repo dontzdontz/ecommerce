@@ -14,7 +14,7 @@ import logo from "../assets/images/logo.png";
           Mon - Fri 09:00 ~ 21:00 (UTC+7
         </div>
       </div>
-      <span class="mt-10  md:mt-0 text-white">© 2008 – 2023 Thai Bang Corp.</span>
+      <span class="mt-10  md:mt-0 text-white">© 2008 – 2023 SUPERWEALTH CO.,LTD</span>
     </div>
   </footer>
 </template>

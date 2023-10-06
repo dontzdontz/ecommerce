@@ -73,7 +73,7 @@ const switchType = (inputType) => {
   <div class="max-w-[1280px] mx-auto absolute z-[999] left-1/2 -translate-x-1/2 top-4 md:top-10 w-screen  md:px-0">
     <div @click="router.push('/')" class="hover:opacity-70  cursor-pointer flex flex-row text-xs absolute -top-2 md:top-0 z-50 left-2 md:left-0 items-center text-white font-bold gap-2 md:text-base">
       <img :src="logo"  class="w-12"/>
-      THAI BANG TOURS
+      SUPERWEALTH
     </div>
     <div class="flex flex-row items-center gap-4 absolute top-0 z-50 right-4 md:right-0">
       <ShoppingCart @click="router.push('/cart')" class="w-8 text-white cursor-pointer hover:scale-[1.1] transition duration-100 ease-out"/>

@@ -161,7 +161,7 @@ onMounted(() => {
   </div>
   <div class="max-w-[1440px] px-4 md:px-40 lg:px-0 mx-auto">
     <Title>
-      为什么泰国旅游首选 THAI BANG ？
+      为什么泰国旅游首选 SUPERWEALTH ？
     </Title>
 
     <div class="grid grid-cols-2 flex-wrap mb-10 md:mb-[120px] md:grid-cols-4 gap-4 md:gap-16 items-start md:items-center justify-between">
